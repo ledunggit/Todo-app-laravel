@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Today extends Model
 {
     use HasFactory;
+    protected $fillable = ['title', 'completed', 'approved', 'taskId'];
 }

@@ -15,6 +15,11 @@ class CreateUpcomingsTable extends Migration
     {
         Schema::create('upcomings', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->boolean('completed')->default(false);
+            $table->boolean('approved')->default(false);
+            $table->boolean('waiting')->default(true);
+            $table->string('taskId');
             $table->timestamps();
         });
     }
